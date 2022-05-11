@@ -1,5 +1,7 @@
 import { getAllGames } from '../fake-api';
 
+import styles from './app.module.scss';
+
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -8,13 +10,13 @@ import Typography from '@material-ui/core/Typography';
 
 export const App = () => {
   return (
-    <div className="container">
-      <div className="games-layout">
+    <div className={styles['container']}>
+      <div className={styles['gamesLayout']}>
         {getAllGames().map((x) => (
-          <Card key={x.id} className="game-card">
+          <Card key={x.id} className={styles['gameCard']}>
             <CardActionArea>
               <CardMedia
-                className="game-card-media"
+                className={styles['gameCardMedia']}
                 image={x.image}
                 title={x.name}
               />
@@ -29,7 +31,7 @@ export const App = () => {
                   variant="body2"
                   color="textSecondary"
                   component="p"
-                  className="game-rating"
+                  className={styles['gameRating']}
                 >
                   <strong>Rating:</strong> {x.rating}
                 </Typography>
