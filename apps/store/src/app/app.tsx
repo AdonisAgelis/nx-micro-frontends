@@ -3,6 +3,7 @@ import { getAllGames } from '../fake-api';
 import styles from './app.module.scss';
 
 import { Header } from '@nx-demo/store/ui-shared';
+import { formatRating } from '@nx-demo/store/util-formatters';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -41,7 +42,7 @@ export const App = () => {
                     component="p"
                     className={styles['gameRating']}
                   >
-                    <strong>Rating:</strong> {x.rating}
+                    <strong>Rating:</strong> {formatRating(x.rating)}
                   </Typography>
                 </CardContent>
               </CardActionArea>
