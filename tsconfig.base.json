@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-demo/store/feature-game-detail": [
+        "libs/store/feature-game-detail/src/index.ts"
+      ],
       "@nx-demo/store/ui-shared": ["libs/store/ui-shared/src/index.ts"],
       "@nx-demo/store/util-formatters": [
         "libs/store/util-formatters/src/index.ts"
